@@ -12,6 +12,13 @@ private WebElement gearbtn;
 @FindBy(xpath="(//a[text()=' SkillRary Demo APP'])[2]")
 private WebElement demoApp;
 
+@FindBy(name="q")
+private WebElement searchtb;
+
+@FindBy(xpath="//input[@value='go']")
+private WebElement searchbtn;
+
+
 public SkillraryLoginPage(WebDriver driver)
 {
 	PageFactory.initElements(driver, this);
@@ -25,4 +32,11 @@ public void skillrarydemoApp()
 {
 	demoApp.click();
 }
+public void  searchtextbox(String name) {
+	searchtb.sendKeys(name);
+}
+public void searchbutton() {
+	searchbtn.click();
+}
+
 }
